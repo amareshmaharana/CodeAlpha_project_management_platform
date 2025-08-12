@@ -9,6 +9,7 @@ import routes from "./routes/index.js";
 dotenv.config();
 
 const app = express();
+
 app.use(
   cors({
     origin: process.env.CLIENT_URL,
@@ -38,6 +39,7 @@ app.get("/", async (req, res) => {
   });
 });
 
+// http://localhost:5000/api-v1
 app.use("/api-v1", routes);
 
 // error middleware
